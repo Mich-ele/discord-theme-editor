@@ -1,0 +1,231 @@
+p>code {
+    border-radius: .375rem;
+    background: var(--ds-gray-100);
+    border: 1px solid var(--ds-gray-300)!important;
+    padding: 2px 3.6px;
+    font-size: .8571429em!important
+}
+
+ul {
+    list-style:none;
+    margin: 0;
+    padding: 0
+}
+
+#header {
+    -webkit-app-region: drag;
+}
+
+#header button {
+    -webkit-app-region: no-drag;
+}
+
+#header input {
+    -webkit-app-region: no-drag;
+}
+
+#sidebar {
+    width: 75px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 0px;
+    border-color: hsla(var(--ds-gray-200-value), 1);
+    border-right-width: 1px;
+}
+
+#container-fluid {
+    max-height: 99%;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 1em;
+    box-sizing: border-box;
+    z-index: -1;
+    max-height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    margin-left: 75px;
+    padding-top: 50px;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+#container-fluid::-webkit-scrollbar {
+    width: 10px;
+}
+
+#container-fluid::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 2px;
+}
+
+#container-fluid::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.dark-theme #sidebar {
+    background-color: rgb(0 0 0);
+}
+
+.light-theme #sidebar {
+    background-color: rgb(240 240 240);
+}
+
+.sidebar-item {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dark-theme .sidebar-item {
+    background-color: transparent
+}
+
+.light-theme .sidebar-item {
+    background-color: transparent
+}
+
+.dark-theme .sidebar-item:hover {
+    background-color: hsla(var(--ds-gray-100-value),var(--tw-bg-opacity))
+}
+
+.light-theme .sidebar-item:hover {
+    background-color: hsla(var(--ds-gray-100-value),var(--tw-bg-opacity))
+}
+
+.sidebar-item.active {
+    background-color: #5764f0;
+    color: #ffffff;
+}
+
+.sidebar-item.active:hover {
+    background-color: #727ceb;
+}
+
+.sidebar-item svg {
+    fill: white;
+    transition: fill 0.3s ease;
+    opacity: 0.7;
+}
+
+.sidebar-item.active svg {
+    fill: white;
+    opacity: 1;
+}
+
+.sidebar-item:hover svg {
+    fill: white;
+    opacity: 1;
+}
+
+.theme-switcher-button {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+.theme-switcher-button:hover svg {
+    fill: white;
+    opacity: 1;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    transition: visibility 0s 0.3s, opacity 0.3s ease-in-out;
+}
+
+.modal-container.modal-show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s 0s, opacity 0.3s ease-in-out;
+}
+
+.geist-overlay-backdrop {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-container.modal-show .geist-overlay-backdrop {
+    opacity: 0.5;
+}
+
+.modal_wrapper__UviS_ {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal-container.modal-show .modal_wrapper__UviS_ {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    transition: opacity 0.15s ease-in-out;
+    opacity: 1;
+}
+  
+body.fade-out {
+    opacity: 0;
+}
+
+ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--ds-background-100);
+    border-color:hsla(var(--ds-gray-200-value),1);
+    border-width: 1px;
+    border-radius: 6px;
+    z-index: 100;
+}
+
+.light-theme ul {
+    box-shadow: 0 0 0 1px var(--ds-gray-alpha-200),0 0 0 1px rgba(0,0,0,.16)!important
+}
+
+.dark-theme ul {
+    box-shadow: 0 0 0 1px var(--ds-gray-alpha-200), 0 0 0 1px rgba(255, 255, 255, .24) !important;
+}
+
+ul li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+ul li:hover {
+    background: var(--ds-gray-200);
+}
+
+.light-theme ul li:hover {
+    background: var(--ds-gray-300);
+}
+
+.dark-theme ul li:hover {
+    background: var(--ds-gray-300);
+}
+
+.combobox_container___ZnDw {
+    position: relative;
+}

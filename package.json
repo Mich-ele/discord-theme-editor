@@ -1,0 +1,45 @@
+{
+  "name": "discord-theme-editor",
+  "version": "1.0.0",
+  "main": "app.js",
+  "keywords": [],
+  "author": "Mich-ele",
+  "license": "ISC",
+  "description": "Discord Theme Editor",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.discord.themeditor",
+    "productName": "Discord Theme Editor",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "app.js",
+      "icon.ico",
+      "node_modules/**",
+      "assets/**",
+      "preload.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/images/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.0.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "asar": "^3.2.0",
+    "monaco-editor": "^0.52.2"
+  }
+}
