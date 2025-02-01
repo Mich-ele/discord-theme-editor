@@ -13,3 +13,7 @@ Customize & edit Discord theme by editing CSS or loading existing theme.
 - Edit font
 - Edit header icon
 - Automatic reload CSS
+
+### Build
+- Install dependencies: ```npm i```
+- Build using electron-builder: ```npm run build```
