@@ -17,3 +17,5 @@ Customize & edit Discord theme by editing CSS or loading existing theme.
 ### Build
 - Install dependencies: ```npm i```
 - Build using electron-builder: ```npm run build```
+
+[Prebuilt Installer](https://github.com/Mich-ele/discord-theme-editor/releases/download/Release/DiscordThemeEditor-Installer.exe)
